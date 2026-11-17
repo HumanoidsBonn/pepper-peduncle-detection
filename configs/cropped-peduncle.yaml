@@ -1,0 +1,8 @@
+# Set this to the downloaded Hugging Face dataset directory.
+path: /path/to/pepper-peduncle-detection
+train: images/train
+val: images/val
+
+names:
+  0: peduncle
+  1: pepper

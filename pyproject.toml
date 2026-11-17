@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pepper-peduncle-detection"
+version = "1.0.0"
+description = "Cropped pepper and peduncle instance segmentation for HortiBot"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-only"
+authors = [
+  {name = "Rohit Menon"},
+]
+dependencies = [
+  "ultralytics>=8.1,<9",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+pepper-peduncle-predict = "scripts.predict:main"
+pepper-peduncle-train = "scripts.train:main"
+
+[tool.setuptools]
+packages = ["pepper_peduncle_detection", "scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
