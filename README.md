@@ -56,10 +56,10 @@ The class mapping is:
 
 ## Training
 
-Download the Hugging Face dataset and edit the `path` field in
-`configs/cropped-peduncle.yaml`, or pass another compatible YOLO segmentation
-configuration. The published run used a pretrained YOLOv8L segmentation model,
-96 px inputs, 150 epochs, and seed 0.
+Download and extract both Hugging Face split archives into one directory, then
+edit the `path` field in `configs/cropped-peduncle.yaml`, or pass another
+compatible YOLO segmentation configuration. The published run used a
+pretrained YOLOv8L segmentation model, 96 px inputs, 150 epochs, and seed 0.
 
 ```bash
 pepper-peduncle-train \
